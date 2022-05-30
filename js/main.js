@@ -191,4 +191,18 @@ $(function () {
     }, 500);
   });
   //end menu scroll
+  
+  //start horizontal img scroll
+  const scrollContainer = document.querySelector(".modules__img");
+  if(!scrollContainer){
+    return(false)
+  }else{
+    scrollContainer.addEventListener("wheel", (evt) => {
+      
+      evt.preventDefault();
+      scrollContainer.scrollLeft += evt.deltaY;
+    });
+  }
+
+  //end horizontal img scroll
 });
